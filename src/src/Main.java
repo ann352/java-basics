@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -131,6 +132,63 @@ public class Main {
             } else {
                 System.out.println(i);
             }
+        }
+
+        // GAME - GUESS THE DRAWING NUMBER
+
+        //we use here random value, and for that we use method nextInt() -> that draw value from '0' (inclusive), to given value exclusive (that means given value -1)
+        // when we want to have numbers from 1 to 100, we should to the result of nextInt() method add 1
+
+        Random random = new Random();
+        int numberToGuess = random.nextInt(100) + 1;
+
+        //we also should now if the number was guessed - so we have to define variable that tell us if we should ask about the number further
+
+        boolean wasNumberGuessed = false;
+
+        while (!wasNumberGuessed) { // we execute loop to time when condition is true, when in loop we transform false to true '!' -> negation -> will end the loop
+            System.out.println("Insert the number");
+            Scanner scanner3 = new Scanner(System.in);
+            int userNumber = scanner3.nextInt();
+
+            if (userNumber > numberToGuess) {
+                System.out.println("Your number is too big! Try again");
+            } else if (userNumber < numberToGuess) {
+                System.out.println("Your number is too small! Try again");
+            } else {
+                System.out.println("Congratulations! You guess the number! Hurra! ");
+                wasNumberGuessed = true;
+            }
+
+        }
+
+        // DATA STRUCTURES - we have those structures for easy finding and operating similar values
+
+        // the first important structure in Java are tables -> e.g.  we have similar data on every site in binder
+        // the size of table we specified when table is created and to extend old table we have to crate new table, and copied values from the old
+
+        // the number of persons at the party
+        String [] names = new String [4];
+
+        // we put values to the table in this way -> we are starting from '0' or in that way -> String[]names = {"Tomek","Romek","Asia","Stasia" }
+        names [0] = "Tomek";
+        names [1] = "Romek";
+        names [2] = "Asia";
+        names [3] = "Basia";
+
+        //when we add new value e.g. here names[3]="Stasia" then in table we will have only the new value
+        //when we try to add to table value for table index that not exist we get -> ArrayIndexOutOfBoundsException -> names [4] = "Jasia";
+
+        //we can show what values we have in the table by for loop , by using method that returns the size of table
+        for(int i = 0; i < names.length ; i++){
+            System.out.println(names[i]);
+        }
+
+        //here is another way to show values of the table - by using 'for' loop
+        // we define the type and name of single element and after ':' we indicate in which table we iterate -> later we only show every single element
+
+        for(String tableName : names){
+            System.out.println(tableName);
         }
 
 
