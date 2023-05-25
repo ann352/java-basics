@@ -218,7 +218,7 @@ public class Main {
 
         for (int i = 0; i < firstNames.size(); i++) {
             System.out.println(firstNames.get(i));
-        } //-> jak wyswietlic element listy w petli for?
+        }
 
         //we can check if list contains given element
         System.out.println(firstNames.contains("Błażej"));
@@ -259,7 +259,7 @@ public class Main {
         nameToMeal.put("Tomek", "Pizza");
         nameToMeal.put("Błażej", "Burger");
         nameToMeal.put("Stanislaw", "Spagetti");
-        nameToMeal.put("Lukasz", "Burger");
+        nameToMeal.put("Lukasz", "Burger");:
 
         //when we try to add new value under existing key the old value will be replaced by the old
         nameToMeal.put("Lukasz", "Spagetti");
@@ -282,7 +282,7 @@ public class Main {
         }
 
         Collection<String> values = nameToMeal.values();
-        for (String value : values){
+        for (String value : values) {
             System.out.println(value);
         }
         //we can also check if map contains given key or value
