@@ -118,7 +118,6 @@ public class Main {
             System.out.println(i);
         }
 
-
         // THE GAME FIZZ-BUZZ
 
         for (int i = 1; i < 101; i++) {
@@ -259,7 +258,7 @@ public class Main {
         nameToMeal.put("Tomek", "Pizza");
         nameToMeal.put("Błażej", "Burger");
         nameToMeal.put("Stanislaw", "Spagetti");
-        nameToMeal.put("Lukasz", "Burger");:
+        nameToMeal.put("Lukasz", "Burger");
 
         //when we try to add new value under existing key the old value will be replaced by the old
         nameToMeal.put("Lukasz", "Spagetti");
